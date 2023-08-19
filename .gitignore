@@ -124,3 +124,4 @@ __pycache__/*
 /tools/o2narc
 
 /tools/swav2swar.exe
+/.vscode/ipch/*
