@@ -329,6 +329,7 @@ BOOL Server_CheckAbilityOnHit(struct Battle *battle, struct BattleServer *server
             )
         ) {
             *seqNum = SUBSCR_RATTLED;
+            result = TRUE;
             result = TRUE; 
         }
     default:
