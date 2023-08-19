@@ -320,7 +320,17 @@ BOOL Server_CheckAbilityOnHit(struct Battle *battle, struct BattleServer *server
             result  = TRUE;
         }       
         break;
-
+    case ABILITY_RATTLED:
+        // defender alive 
+        if(server->activePokemon[server->defender].curHP
+            && (server->moveType == TYPE_BUG
+                || server->moveType == TYPE_DARK
+                || server->moveType == TYPE_GHOST
+            )
+        ) {
+            *seqNum = SUBSCR_RATTLED;
+            result = TRUE; 
+        }
     default:
         break;
     }
